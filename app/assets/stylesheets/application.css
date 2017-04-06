@@ -1,3 +1,4 @@
+
 /*
  * This is a manifest file that'll be compiled into application.css, which will include all the files
  * listed below.
@@ -6,10 +7,38 @@
  * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
  *
  * You're free to add application-wide styles to this file and they'll appear at the bottom of the
- * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
- * files in this directory. Styles in this file should be added after the last require_* statement.
- * It is generally better to create a new file per style scope.
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
  *
  *= require_tree .
  *= require_self
+ *= require bootstrap.min
  */
+
+ html{
+   /* This image will be displayed fullscreen */
+
+   /* Ensure the html element always takes up the full height of the browser window */
+   min-height:100%;
+
+   /* The Magic */
+ }
+
+ em {      font-size: 220%;     } 
+
+ 
+
+ body{
+   background:url('http://nancytravis.org/wp-content/uploads/2014/05/Dollarphotoclub_65314321.jpg') no-repeat center center fixed;
+
+   background-size:cover;
+
+  font-family: 'Ubuntu', sans-serif;
+   
+  }
+ 
+ nav.navbar-mike {
+  background-color: #16e25a;
+  color: white;
+ }

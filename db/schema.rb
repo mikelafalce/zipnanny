@@ -18,9 +18,9 @@ ActiveRecord::Schema.define(version: 20170403164835) do
   create_table "sittings", force: :cascade do |t|
     t.integer  "parent_id"
     t.integer  "nanny_id"
-    t.time     "start_time"
-    t.time     "stop_time"
-    t.date     "date"
+    t.datetime "start_time"
+    t.datetime "stop_time"
+    t.integer  "duration"
     t.integer  "number_of_kids"
     t.integer  "billed_amount"
     t.datetime "created_at",     null: false

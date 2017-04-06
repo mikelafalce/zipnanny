@@ -1,32 +1,36 @@
+
+<head><link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet"></head>
+
 <p id="notice"><%= notice %></p>
 
-<h1>All Sittings</h1>
+<h1 class="text-center" style="color:#6396e8" font-family:Ubuntu;"><em>All Sittings</em></h1>
 
-<table>
+<div class="text-center">
+<table align="center" style="width:80%">
   <thead>
-    <tr>
+    <tr style="color:#6396e8" >
       
-      <th>Start time</th>
-      <th>Stop time</th>
-      <th>Date</th>
-      <th>Number of kids</th>
-      <th>Billed amount</th>
+      <th>Start Time</th>
+      <th>Stop Time</th>
+      <th>Duration</th>
+      <th>Number Of Kids</th>
+      <th>Billed Amount</th>
       <th colspan="3"></th>
     </tr>
   </thead>
 
   <tbody>
     <% @sittings.each do |sitting| %>
-      <tr>
+      <tr style="color:#6396e8">
         
         <td><%= sitting.start_time %></td>
         <td><%= sitting.stop_time %></td>
-        <td><%= sitting.date %></td>
+        <td><%= (sitting.stop_time - sitting.start_time)/3600 %></td>
         <td><%= sitting.number_of_kids %></td>
-        <td><%= sitting.billed_amount %></td>
-        <td><%= link_to 'Show', sitting %></td>
-        <td><%= link_to 'Edit', edit_sitting_path(sitting) %></td>
-        <td><%= link_to 'Destroy', sitting, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= ((sitting.stop_time - sitting.start_time)/3600)*(sitting.number_of_kids)*10 %></td>
+        <td><%= link_to 'Sitting Details', sitting %></td>
+        <td><%= link_to 'Edit Sitting', edit_sitting_path(sitting) %></td>
+        <!-- <td><%= link_to 'Delete Sitting', sitting, method: :delete, data: { confirm: 'Are you sure?' } %></td> -->
       </tr>
     <% end %>
   </tbody>
@@ -34,4 +38,9 @@
 
 <br>
 
-<%= link_to 'New Sitting', new_sitting_path %>
+
+<h3><%= link_to 'New Sitting', new_sitting_path, {style: "color: #6396e8"} %></h3>
+
+
+
+</div>

@@ -54,7 +54,7 @@ class SittingsController < ApplicationController
   def destroy
     @sitting.destroy
     respond_to do |format|
-      format.html { redirect_to sittings_url, notice: 'Sitting was successfully destroyed.' }
+      format.html { redirect_to sittings_url, notice: 'Sitting was successfully deleted.' }
       format.json { head :no_content }
     end
   end
@@ -65,7 +65,7 @@ class SittingsController < ApplicationController
     end
 
     def sitting_params
-      whitelisted = params.require(:sitting).permit(:start_time, :stop_time, :duration, :date, :number_of_kids, :billed_amount)
+      whitelisted = params.require(:sitting).permit(:start_time, :stop_time, :duration, :number_of_kids, :billed_amount)
       whitelisted.merge(parent_id: current_user.id.to_i)
     end
 end

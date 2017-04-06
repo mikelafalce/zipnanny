@@ -2,26 +2,31 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>ZipNanny</title>
+    <title class="text-center" style="color:#6396e8; font-family:Ubuntu;">
+    <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">ZipNanny</title>
     <%= csrf_meta_tags %>
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
   </head>
   <body>
     
-    <nav>
-      <% if current_user %>
-      
-      <p>Hello, <%= current_user.first_name %>!
-        <%= link_to 'All Sittings', sittings_path %>
-        <%= link_to 'My Sittings', my_sittings_path %>
-        <%= link_to 'My Profile', new_user_session_path %>
-        <%= link_to 'Logout', destroy_user_session_path, method: :delete %>
 
+
+
+    <nav style="color:#6396e8;" class="navbar navbar-toggleable-md navbar-mike bg-primary" > 
+      <% if current_user %>
+     
+      <p>Hello, <%= current_user.first_name %>!
+        <%= link_to 'All Sittings', sittings_path, {style: "color: #6396e8"} %>
+        <%= link_to 'My Sittings', my_sittings_path, {style: "color: #6396e8"} %>
+        <%= link_to 'My Profile', new_user_session_path, {style: "color: #6396e8"} %>
+        <%= link_to 'Logout', destroy_user_session_path, method: :delete %>
+        
 
       <% else %>
-        <%= link_to 'Register', new_user_registration_path %>
-        <%= link_to 'Login', new_user_session_path %>
+        <%= link_to 'Register', new_user_registration_path, {style: "color: #6396e8"} %>
+        <%= link_to 'Login', new_user_session_path, {style: "color: #6396e8"} %>
       <% end %>
     </nav>
     <%= yield %>
