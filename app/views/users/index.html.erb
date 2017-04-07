@@ -1,8 +1,8 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Users</h1>
+<h1 align="center" style="color:#6396e8; font-family:Ubuntu">Users</h1>
 
-<table>
+<table align="center" style="color:#6396e8" width= 80%>
   <thead>
     <tr>
       <th>Last name</th>
@@ -10,8 +10,7 @@
       <th>Rating</th>
       <th>Age</th>
       <th>Gender</th>
-      <th>Hourly rate</th>
-      <th>Add child rate</th>
+      
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -24,16 +23,14 @@
         <td><%= user.rating %></td>
         <td><%= user.age %></td>
         <td><%= user.gender %></td>
-        <td><%= user.hourly_rate %></td>
-        <td><%= user.add_child_rate %></td>
-        <td><%= link_to 'Show', user %></td>
-        <td><%= link_to 'Edit', edit_user_path(user) %></td>
-        <td><%= link_to 'Destroy', user, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'View Profile', user_path(current_user), {style: "color: #6396e8"} %>
+          
+        </td>
+        <td><%= link_to 'Edit Profile', edit_user_path(user), {style: "color: #6396e8"} %></td>
+        </td>
       </tr>
     <% end %>
   </tbody>
 </table>
 
 <br>
-
-<%= link_to 'New User', new_user_path %>

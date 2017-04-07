@@ -28,8 +28,8 @@
         <td><%= (sitting.stop_time - sitting.start_time)/3600 %></td>
         <td><%= sitting.number_of_kids %></td>
         <td><%= ((sitting.stop_time - sitting.start_time)/3600)*(sitting.number_of_kids)*10 %></td>
-        <td><%= link_to 'Sitting Details', sitting %></td>
-        <td><%= link_to 'Edit Sitting', edit_sitting_path(sitting) %></td>
+        <td><%= link_to 'Sitting Details', sitting, {style: "color: #6396e8"} %></td>
+        <td><%= link_to 'Edit Sitting', edit_sitting_path(sitting), {style: "color: #6396e8"} %></td>
         <!-- <td><%= link_to 'Delete Sitting', sitting, method: :delete, data: { confirm: 'Are you sure?' } %></td> -->
       </tr>
     <% end %>
