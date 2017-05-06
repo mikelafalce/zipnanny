@@ -1,0 +1,10 @@
+LOG:  database system was shut down at 2017-04-07 13:00:19 CDT
+LOG:  MultiXact member wraparound protections are now enabled
+LOG:  database system is ready to accept connections
+LOG:  autovacuum launcher started
+FATAL:  database "ZipNanny_development" does not exist
+FATAL:  database "ZipNanny_development" does not exist
+LOG:  autovacuum launcher shutting down
+LOG:  received smart shutdown request
+LOG:  shutting down
+LOG:  database system is shut down
