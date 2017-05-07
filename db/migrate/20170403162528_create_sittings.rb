@@ -6,7 +6,7 @@ class CreateSittings < ActiveRecord::Migration[5.0]
       t.datetime :start_time
       t.datetime :stop_time
       t.integer :duration
-      t.integer :number_of_kids
+      t.integer :number_of_kids 
       t.integer :billed_amount
 
       t.timestamps

@@ -25,7 +25,10 @@ class SittingsController < ApplicationController
   def create
     @sitting = Sitting.new(sitting_params)
     respond_to do |format|
-      if @sitting.save
+      if @sitting.start_time > @sitting.stop_time
+        format.html { redirect_to new_sitting_path, notice: "Sorry. Stop Time can't be before Start Time!" }
+        
+      elsif @sitting.save
         format.html { redirect_to @sitting, notice: 'Sitting was successfully created.' }
         format.json { render :show, status: :created, location: @sitting }
       else

@@ -27,9 +27,7 @@
 
  em {      font-size: 220%;     } 
 
- 
-
- body{
+ .login-background{
    background:url('http://nancytravis.org/wp-content/uploads/2014/05/Dollarphotoclub_65314321.jpg') no-repeat center center fixed;
 
    background-size:cover;
@@ -38,7 +36,14 @@
    
   }
  
+
+ body{
+  
+  font-family: 'Ubuntu', sans-serif;
+   
+  }
+ 
  nav.navbar-mike {
-  background-color: #16e25a;
+  background-color: #bbf268;
   color: white;
  }
